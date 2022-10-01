@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {% for user in users %}
+    {{ user.email }} <a href ="{{ path("admin.remove",{'id': user.id})}}">Usuń Gnoja</a>
+    <br>
+    {% endfor %}
+{% endblock %}
